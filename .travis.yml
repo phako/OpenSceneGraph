@@ -8,16 +8,11 @@ env:
 matrix:
   fast_finish: true
   include:
-    #Linux build
     - os: linux
       dist: trusty
       sudo: false
-      cache:
-        apt: true
-        directories:
-          - $HOME/.ccache
       compiler:
-          #- clang
+          - clang
           - g++
       addons:
         apt:
